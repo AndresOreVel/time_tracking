@@ -165,12 +165,14 @@ body {
   padding: 1.5rem;
   color: hsl(0, 0%, 100%);
 }
-.card__bottom:hover {
-  cursor: pointer;
-  background-color: hsl(235, 45%, 61%);
-}
-.card__bottom:active {
-  background-color: hsl(235, 45%, 61%);
+@media (hover: hover) and (pointer: fine) {
+  .card__bottom:hover {
+    cursor: pointer;
+    background-color: hsl(235, 45%, 61%);
+  }
+  .card__bottom:active {
+    background-color: hsl(235, 45%, 61%);
+  }
 }
 .card__bottom__header {
   display: flex;

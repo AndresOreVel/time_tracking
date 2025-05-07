@@ -9,7 +9,7 @@
     border-bottom-left-radius: calc(1rem * 2);
     border-bottom-right-radius: calc(1rem * 2);
 
-    @include mixins.breakpoint-down (mobile){
+    @include mixins.breakpoint-down (mobile) {
         max-width: 100%;
     }
 
@@ -27,49 +27,52 @@
         padding: 1.5rem;
         color: variables.$white-color;
 
-        &:hover{
-            cursor: pointer;
-            background-color: variables.$purple-500;
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+                background-color: variables.$purple-500;
+            }
+
+            &:active {
+                background-color: variables.$purple-500;
+            }
         }
 
-        &:active{
-            background-color: variables.$purple-500;
-        }
-
-        &__header{
+        &__header {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            h2{
+            h2 {
                 font-size: 1.125rem;
                 font-weight: 400;
             }
 
-            img{
+            img {
                 width: 20px;
             }
         }
 
-        &__content{
+        &__content {
             display: flex;
             flex-direction: column;
             gap: .5rem;
 
-            @include mixins.breakpoint-down (mobile){
+            @include mixins.breakpoint-down (mobile) {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
             }
 
-            .current-hours{
+            .current-hours {
                 line-height: 1.2;
                 font-size: clamp(1rem, 0.75rem + 3vw, 3rem);
                 font-weight: 300;
             }
 
-            .previous-hours{
+            .previous-hours {
                 color: variables.$purple-500;
                 font-size: 0.9375rem;
             }
@@ -88,22 +91,22 @@
     background-image: url(../images/icon-play.svg);
 }
 
-.study-card{
+.study-card {
     background-color: variables.$pink-400-study;
     background-image: url(../images/icon-study.svg);
 }
 
-.exercise-card{
+.exercise-card {
     background-color: variables.$green-400-exercise;
     background-image: url(../images/icon-exercise.svg);
 }
 
-.social-card{
+.social-card {
     background-color: variables.$purple-700-social;
     background-image: url(../images/icon-social.svg);
 }
 
-.self-care-card{
+.self-care-card {
     background-color: variables.$yellow-300-self-care;
     background-image: url(../images/icon-self-care.svg);
 }
