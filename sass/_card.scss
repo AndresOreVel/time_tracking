@@ -27,6 +27,15 @@
         padding: 1.5rem;
         color: variables.$white-color;
 
+        &:hover{
+            cursor: pointer;
+            background-color: variables.$purple-500;
+        }
+
+        &:active{
+            background-color: variables.$purple-500;
+        }
+
         &__header{
             display: flex;
             justify-content: space-between;
