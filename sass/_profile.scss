@@ -78,6 +78,7 @@
 
         a {
             color: variables.$purple-500;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover{
                 color: variables.$white-color;

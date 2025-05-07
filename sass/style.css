@@ -123,6 +123,7 @@ body {
 }
 .profile__card__bottom a {
   color: hsl(235, 45%, 61%);
+  -webkit-tap-highlight-color: transparent;
 }
 .profile__card__bottom a:hover {
   color: hsl(0, 0%, 100%);
