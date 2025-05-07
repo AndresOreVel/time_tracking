@@ -170,6 +170,8 @@ body {
     cursor: pointer;
     background-color: hsl(235, 45%, 61%);
   }
+}
+@media (hover: none) and (pointer: coarse) {
   .card__bottom:active {
     background-color: hsl(235, 45%, 61%);
   }

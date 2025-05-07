@@ -28,12 +28,13 @@
         color: variables.$white-color;
 
         @media (hover: hover) and (pointer: fine) {
-
             &:hover {
                 cursor: pointer;
                 background-color: variables.$purple-500;
             }
+        }
 
+        @media (hover: none) and (pointer: coarse) {
             &:active {
                 background-color: variables.$purple-500;
             }
