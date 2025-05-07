@@ -1,0 +1,22 @@
+@use 'variables';
+@use 'mixins';
+
+.dashboard{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    max-height: 520px;
+    gap: 1.875rem;
+
+    @include mixins.breakpoint-down (tablet){
+        padding: 1rem;
+    }
+
+    @include mixins.breakpoint-down (mobile){
+        display: flex;
+        flex-flow: column;
+        min-width: 100%;
+        padding: 0;
+        gap: 1.5rem;
+    }
+}

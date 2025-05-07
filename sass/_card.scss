@@ -1,0 +1,100 @@
+@use 'variables';
+@use 'mixins';
+
+.card {
+    display: grid;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: right 20px top -10px;
+    border-bottom-left-radius: calc(1rem * 2);
+    border-bottom-right-radius: calc(1rem * 2);
+
+    @include mixins.breakpoint-down (mobile){
+        max-width: 100%;
+    }
+
+
+    &__top {
+        min-height: 2.875rem;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: variables.$navy-900;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        color: variables.$white-color;
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2{
+                font-size: 1.125rem;
+                font-weight: 400;
+            }
+
+            img{
+                width: 20px;
+            }
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            @include mixins.breakpoint-down (mobile){
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .current-hours{
+                line-height: 1.2;
+                font-size: clamp(1rem, 0.75rem + 3vw, 3rem);
+                font-weight: 300;
+            }
+
+            .previous-hours{
+                color: variables.$purple-500;
+                font-size: 0.9375rem;
+            }
+        }
+    }
+}
+
+.work-card {
+    background-color: variables.$orange-300-work;
+    background-image: url(../images/icon-work.svg);
+
+}
+
+.play-card {
+    background-color: variables.$blue-300-play;
+    background-image: url(../images/icon-play.svg);
+}
+
+.study-card{
+    background-color: variables.$pink-400-study;
+    background-image: url(../images/icon-study.svg);
+}
+
+.exercise-card{
+    background-color: variables.$green-400-exercise;
+    background-image: url(../images/icon-exercise.svg);
+}
+
+.social-card{
+    background-color: variables.$purple-700-social;
+    background-image: url(../images/icon-social.svg);
+}
+
+.self-care-card{
+    background-color: variables.$yellow-300-self-care;
+    background-image: url(../images/icon-self-care.svg);
+}

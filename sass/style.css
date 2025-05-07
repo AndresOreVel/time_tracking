@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  min-height: 100svh;
+  background-color: hsl(226, 43%, 10%);
+}
+@media (max-width: 36rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    min-height: 100%;
+  }
+}
+
+.dashboard {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  max-height: 520px;
+  gap: 1.875rem;
+}
+@media (max-width: 60rem) {
+  .dashboard {
+    padding: 1rem;
+  }
+}
+@media (max-width: 36rem) {
+  .dashboard {
+    display: flex;
+    flex-flow: column;
+    min-width: 100%;
+    padding: 0;
+    gap: 1.5rem;
+  }
+}
+
+.profile__card {
+  background-color: hsl(246, 80%, 60%);
+  display: grid;
+  grid-template-rows: auto min-content;
+  border-radius: 1rem;
+  grid-column: 1/2;
+  grid-row: 1/span 2;
+}
+@media (max-width: 36rem) {
+  .profile__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
+.profile__card__top {
+  border-radius: 1rem;
+}
+.profile__card__top__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+  padding: 2rem;
+  line-height: 1.2;
+}
+@media (max-width: 36rem) {
+  .profile__card__top__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.profile__card__top__container__img {
+  width: 78px;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  display: block;
+  max-width: 100%;
+}
+.profile__card__top__container__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: hsl(0, 0%, 100%);
+}
+.profile__card__top__container__info p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.profile__card__top__container__info h2 {
+  max-inline-size: 10ch;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+@media (max-width: 36rem) {
+  .profile__card__top__container__info h2 {
+    max-inline-size: 66ch;
+  }
+}
+.profile__card__bottom {
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+@media (max-width: 36rem) {
+  .profile__card__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.profile__card__bottom a {
+  color: hsl(235, 45%, 61%);
+}
+.profile__card__bottom a:hover {
+  color: hsl(0, 0%, 100%);
+}
+.profile__card__bottom a:active {
+  color: hsl(0, 0%, 100%);
+}
+
+.bg-card-900 {
+  background-color: hsl(235, 46%, 20%);
+}
+
+.bg-card-600 {
+  background-color: hsl(246, 80%, 60%);
+}
+
+.card {
+  display: grid;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: right 20px top -10px;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+@media (max-width: 36rem) {
+  .card {
+    max-width: 100%;
+  }
+}
+.card__top {
+  min-height: 2.875rem;
+}
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+.card__bottom__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__bottom__header h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.card__bottom__header img {
+  width: 20px;
+}
+.card__bottom__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (max-width: 36rem) {
+  .card__bottom__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.card__bottom__content .current-hours {
+  line-height: 1.2;
+  font-size: clamp(1rem, 0.75rem + 3vw, 3rem);
+  font-weight: 300;
+}
+.card__bottom__content .previous-hours {
+  color: hsl(235, 45%, 61%);
+  font-size: 0.9375rem;
+}
+
+.work-card {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+}
+
+.play-card {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+}
+
+.study-card {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+}
+
+.exercise-card {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.social-card {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+}
+
+.self-care-card {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+}/*# sourceMappingURL=style.css.map */
